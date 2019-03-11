@@ -46,12 +46,20 @@ class App extends Component {
         ...state.basket.slice(index + 1)
       ]
     }));
+  }
+
+  addToBasket = idx => {
+    this.setState(state => ({
+      basket: [{ name: "omar" }]
+    }));
+    console.log(this.state.basket);
   };
 
   render() {
     return (
       <div className="App">
-        <CarouselUl pets={this.state.pets} />
+        <h1> Pets to Go!</h1>
+        <CarouselUl pets={this.state.pets} addToBasket={this.addToBasket} />
         <Basket
           basket={this.state.basket}
           onPlus={this.increaseQuantity}
