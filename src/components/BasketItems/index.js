@@ -1,12 +1,12 @@
 import React from "react";
 
 const BasketItem = props => (
-  <li>
+  <li className="listItemBasket">
     {props.name}
-    <button>+</button>
+    <button onClick={props.onPlus}>+</button>
     {props.quantity}
-    <button>-</button>
-    {props.price} * {props.quantity}
+    <button onClick={props.onMinus}>-</button>
+    {props.price * props.quantity}
   </li>
 );
 
