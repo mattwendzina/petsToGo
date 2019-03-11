@@ -8,14 +8,22 @@ class App extends Component {
     super(props);
     this.state = {
       pets: Pets,
-      quantity: 0
+      basket: []
     };
   }
+
+  addToBasket = idx => {
+    this.setState(state => ({
+      basket: [{ name: "omar" }]
+    }));
+    console.log(this.state.basket);
+  };
 
   render() {
     return (
       <div className="App">
-        <CarouselUl pets={this.state.pets} />
+        <h1> Pets to Go!</h1>
+        <CarouselUl pets={this.state.pets} addToBasket={this.addToBasket} />
       </div>
     );
   }
