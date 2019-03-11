@@ -1,9 +1,18 @@
 import React from "react";
 
+import BasketItem from "../BasketItems";
+
 const BasketList = props => (
-  <h1>Basket</h1>
-  // Ul component
-  // Total component
+  <ul>
+    {props.pets.map((pet, idx) => (
+      <BasketItem
+        key={idx}
+        name={pet.name}
+        quantity={pet.quantity}
+        price={pet.price}
+      />
+    ))}
+  </ul>
 );
 
 export default BasketList;

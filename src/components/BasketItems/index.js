@@ -1,9 +1,13 @@
 import React from "react";
 
 const BasketItem = props => (
-  <h1>Basket</h1>
-  // Ul component
-  // Total component
+  <li>
+    {props.name}
+    <button>+</button>
+    {props.quantity}
+    <button>-</button>
+    {props.price} * {props.quantity}
+  </li>
 );
 
 export default BasketItem;
