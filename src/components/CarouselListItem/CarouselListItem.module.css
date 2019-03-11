@@ -1,0 +1,9 @@
+li {
+  color: blue;
+  list-style-type: none;
+  flex: 0 0 20%;
+  width: calc(20% - 5px);
+  border: solid 1px black;
+  margin: 5px;
+  overflow: scroll;
+}
